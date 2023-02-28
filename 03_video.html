@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio, Mobile Web, Parasite</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="./images/favicon/montblanc_fav32.png">
+    <link rel="apple-touch-icon=precomposed" href="./images/favicon/montblanc_fav144.png">
+    <!-- reset CSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/notosans_kr_CDN.css">
+    <!-- page css -->
+    <link rel="stylesheet" href="./css/display_none_scrollbar.css">
+    <link rel="stylesheet" href="./css/page.css">
+    
+    <link rel="stylesheet" href="./css/poster.css">
+    <link rel="stylesheet" href="./css/ticket.css">
+    <link rel="stylesheet" href="./css/video.css">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- 부트스트랩 -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
+    <!-- 버전 안정화 4 -->
+    <!-- css를 클래스화 해놓음 -->
+
+    <!-- 제이쿼리 코어파일 -->
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <!-- page js -->
+    <script src="./js/calHeight.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!-- 페이지 오픈 -->
+        <div class="page_open"></div>
+        <!-- 페이지 넘기기 -->
+        <div class="page_close"></div>
+
+        <!-- HEADER -->
+        <header class="header">
+            <!-- 햄버거 메뉴 그리기 -->
+            <input type="checkbox" id="menuicon">
+            <label for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <!-- /햄버거 메뉴 그리기 -->
+            <!-- 햄버거 메뉴 클릭시 나오는 GNB메뉴 -->
+            <nav class="mobile_gnb">
+                <ul class="gnb">
+                    <li><a href="./01_poster.html">HOME</a></li>
+                    <li><a href="./02_ticket.html">GET&nbsp;TICKETS</a></li>
+                    <li><a href="./03_video.html">VIDEOS</a></li>
+                    <li><a href="./04_synopsis.html">SYNOPSIS</a></li>
+                    <li><a href="#">SHARE</a></li>
+                </ul>
+                <ul class="sns">
+                    <li><a href="#" class="facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+                    <li><a href="#" class="insta"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </nav>
+            <!-- /햄버거 메뉴 클릭시 나오는 GNB메뉴 -->
+            
+            <!-- TICKET 링크 페이지 -->
+            <aside class="ticket">
+                <a href="./02_ticket.html"><button>GET&nbsp;TICKETS</button></a>
+            </aside>
+            <!-- /TICKET 링크 페이지 -->
+        </header>
+        <!-- /HEADER -->
+        <!-- CONTENTS -->
+        <div id="contents">
+           <section class="youtube">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/-O_kfm1C7No"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen="allowfullscreen">
+                </iframe>
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube-nocookie.com/embed/0HaQiZOCtrc"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen="allowfullscreen">
+                </iframe>
+            </div>
+        <!-- /CONTENTS -->
+    <!-- FOOTER -->
+    <footer>
+        <p>
+            <img src="./images/netflix_logo2.png" alt="제작사 로고">
+        </p>
+        <div class="copyright">
+            <p>
+                MOVIE PLATFORM &copy; 2022 POWSTER
+            </p>
+            <p>
+                &copy; 2018 NEON RATED, LLC
+            </p>
+        </div>
+    </footer>
+    <!-- /FOOTER -->
+</body>
+</html>
+<script src="./js/video.js"></script>
+<script src="./js/pagechange.js"></script>

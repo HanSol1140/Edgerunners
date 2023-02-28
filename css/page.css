@@ -1,0 +1,31 @@
+@charset "utf-8";
+.page_open {
+    position: absolute;
+    z-index:1000;
+    left: -150%;
+    top: 0;
+    width:150%;
+    height: 200%;
+    background-image: linear-gradient(90deg, #222 0%, #111 100%);
+    animation-duration: 0.4s;
+    animation-iteration-count: 1;
+    animation-name: page_open;
+
+}
+@keyframes page_open {
+    0% {left:0%}
+
+    50% {left:0%}
+
+    100% {left:-150%}
+}
+.page_close {
+    position: absolute;
+    z-index:1001;
+    left: -150%;
+    top: 0;
+    width:150%;
+    height: 200%;
+    background-image: linear-gradient(90deg, #2f2f2f 0%, #111 100%);
+    transition: all 0.4s;
+}

@@ -1,0 +1,205 @@
+@charset "utf-8";
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+#wrap {
+    width: 100%;
+    /* border: 8px solid #000; */
+}
+#wrap {
+    background-image: url('../images/index_backposter.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+/* Header */
+.header {
+    padding: 20px 12px;
+}
+/* ====================================================== */
+/* 모바일 햄버거 메뉴 효과 */
+/* ====================================================== */
+
+/* A. 햄버거 메뉴 그리기 */
+input[id="menuicon"] {
+    display: none;
+}
+input[id="menuicon"]+label {
+    display: block;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+    /* 위치기준값 */
+    position: relative;
+    z-index: 100;
+}
+input[id="menuicon"]+label span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 8px;
+    /* 포지션 */
+    position: absolute;
+    z-index: 100;
+    transition: all 0.3s;
+}
+input[id="menuicon"]+label span:nth-child(1) {
+    top: 0;  
+}
+input[id="menuicon"]+label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+input[id="menuicon"]+label span:nth-child(3) {
+    bottom: 0;
+}
+
+/* B. 클릭시 X버튼 만들기 */
+input[id="menuicon"]:checked +label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked +label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menuicon"]:checked +label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* C. GNB 메뉴 슬라이딩 효과 */
+.header nav[class="mobile_gnb"] {
+    width: 250px;
+    height: 100%;
+    background: #195730;
+    background-image: linear-gradient(45deg, #202627 0%, #111 100%);
+    position: absolute;
+    left: -250px;
+    top: 0;
+    z-index: 90;
+    transition: all 0.3s;
+}
+input[id="menuicon"]:checked~nav {
+    left: 0px;
+}
+
+/* =================================================================== */
+
+.header .mobile_gnb {
+    padding: 64px 0 0 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 0.8rem;
+}
+.header .mobile_gnb .gnb>li {
+    height: 42px;
+    line-height: 42px;
+    padding-left: 24px;
+}
+.header .mobile_gnb .gnb>li:hover {
+    background: #fff;
+}
+.header .mobile_gnb .gnb>li>a {
+    display: block;
+    color: #fff;
+}
+.header .mobile_gnb .gnb>li>a:hover {
+    color: #000;
+    font-weight: 700;
+}
+.header .mobile_gnb .sns {
+    display: table;
+    width: 234px;
+    padding-left: 24px;
+}
+.header .mobile_gnb .sns li {
+    display: table-cell;
+    width: 70px;
+}
+.header .mobile_gnb .sns li a {
+    display: table-cell;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    padding-top: 11px;
+}
+.header .mobile_gnb .sns i {
+    font-size: 1.2rem;
+    color: #fff;
+}
+.header .mobile_gnb .sns .facebook {background-color: #3c5a98;}
+.header .mobile_gnb .sns .twitter {background-color: #56acef;}
+.header .mobile_gnb .sns .insta {background-color: #5cbf4a;}
+
+/* 추가 코딩 마지막 메뉴 초기화 하기 */
+
+.header .mobile_gnb .gnb li:last-child:hover {
+    background: none;
+    cursor: default !important;
+}
+.header .mobile_gnb .gnb li:last-child a:hover {
+    color:white;
+    font-weight: 400;
+    cursor:default !important;
+}
+
+/* CONTENTS */
+
+#contents {
+    /* width:100%; */
+}
+section .button {
+    widows: 290px;
+    height: 40px;
+}
+
+section .button button {
+    width:250px;
+    height:48px;
+    background-color: #b50602;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+    position: absolute;
+    top:80px;
+    left:50%;
+    /* bottom: 50px; */
+    z-index: 1;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    box-shadow: 2px 3px 10px #000;
+    cursor: pointer;
+    
+}
+
+section .button button a {
+    font-family: 'ROBOTO', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    
+    color:#fff;
+}
+
+/* FOOTER */ 
+footer {
+    background: #000;
+    padding-top: 8px;
+    text-align: center;
+}
+footer>p {
+    margin-bottom: 56px;
+}
+
+footer .copyright {
+    padding-bottom: 24px;
+}
+
+footer .copyright p {
+    margin-bottom: 24px;
+    color:#1b1b1b;
+}
+footer .copyright p {
+    font-size: 0.75rem;
+    color:#4c4c4c;
+}
